@@ -1,0 +1,91 @@
+@import "src/assets/scss/vars";
+@import "src/assets/scss/mixins";
+
+.special-offers {
+  margin-bottom: 100px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    svg {
+      margin-right: 45px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+
+    @include lg {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 25px;
+      grid-row-gap: 25px;
+
+      justify-items: center;
+    }
+
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 25px;
+
+      justify-items: center;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    padding: 25px 0 25px 0;
+    background-color: $white;
+    width: 255px;
+
+    &-text {
+      margin-bottom: 20px;
+
+      @include font-size-14px;
+    }
+
+    &-price {
+      margin-bottom: 20px;
+
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 25px;
+      letter-spacing: 0.05em;
+    }
+
+    &-button {
+      width: 130px;
+      height: 35px;
+
+      color: $white;
+      background-color: $green;
+
+      &:hover {
+        border: 2px solid $green;
+      }
+
+      @include lg {
+        width: 160px;
+      }
+    }
+
+    @include lg {
+      width: 360px;
+    }
+
+    @include md {
+      width: 255px;
+    }
+  }
+
+  @include sm {
+    margin-bottom: 50px;
+  }
+}

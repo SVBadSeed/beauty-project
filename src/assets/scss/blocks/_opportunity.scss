@@ -1,0 +1,102 @@
+@import "src/assets/scss/vars";
+@import "src/assets/scss/mixins";
+
+.section-opport {
+  @include container;
+  margin-bottom: 140px;
+
+  @include lg {
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 35px 45px;
+    color: $white;
+    width: 540px;
+    height: 210px;
+
+    background-color: $green;
+
+    &-block {
+      &--title {
+        margin-bottom: 25px;
+
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+      }
+
+      &--text {
+        @include font-size-14px;
+        margin-bottom: 25px;
+      }
+
+      &--input {
+        padding-left: 25px;
+
+        width: 225px;
+        height: 35px;
+
+        color: #C4C4C4;
+        border-radius: 30px;
+      }
+
+      &--button {
+        height: 35px;
+        background-color: transparent;
+        color: $white;
+
+        border: 2px solid $white;
+        border-radius: 40px;
+
+        @include font-size-14px;
+        letter-spacing: 0.05em;
+      }
+
+      @include sm {
+        margin-right: 10px;
+
+        &--title {
+          margin-bottom: 10px;
+          font-size: 14px;
+          line-height: 14px;
+        }
+
+        &--text {
+          font-size: 12px;
+          line-height: 16px;
+          margin-bottom: 15px;
+        }
+
+        &--input {
+          width: 175px;
+          height: 30px;
+        }
+      }
+    }
+
+    @include lg {
+      &:first-child {
+        margin-bottom: 30px;
+      }
+    }
+
+    @include sm {
+      padding: 20px;
+
+      width: 300px;
+      height: 150px;
+    }
+  }
+
+  @include sm {
+    margin-bottom: 70px;
+  }
+}

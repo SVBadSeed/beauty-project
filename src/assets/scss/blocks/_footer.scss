@@ -1,0 +1,98 @@
+@import "src/assets/scss/vars";
+@import "src/assets/scss/mixins";
+
+.footer {
+  &-contacts {
+    @include container;
+
+    background-color: $white;
+
+    .container {
+      padding: 30px 0 30px 0;
+
+      @include sm {
+        text-align: center;
+        display: block;
+      }
+    }
+
+    &__social {
+      display: flex;
+      justify-content: space-between;
+
+      width: 240px;
+
+      &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 45px;
+        height: 45px;
+
+        border: 2px solid $green;
+        border-radius: 50%;
+
+        svg {
+          fill: $green;
+        }
+
+        &:hover {
+          background-color: $green;
+
+          svg {
+            fill: $white;
+          }
+        }
+      }
+
+      @include sm {
+        justify-content: center;
+        margin-bottom: 20px;
+        width: 100%;
+
+        &-item {
+          margin-left: 10px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    &__address {
+      @include font-size-14px;
+
+      @include sm {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &-bottom {
+    @include container;
+
+    color: #828282;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+    height: 64px;
+
+    &__privacy {
+      margin-left: 20px;
+
+      @include sm {
+        margin-top: 15px;
+      }
+    }
+
+    .container {
+      @include sm {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
